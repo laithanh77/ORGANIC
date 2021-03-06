@@ -825,7 +825,7 @@ class ORGANIC(object):
             print('============================\n')
             print('GENERATOR PRETRAINING')
 
-        for epoch in tqdm(range(self.PRETRAIN_GEN_EPOCHS)):
+        for epoch in range(self.PRETRAIN_GEN_EPOCHS):
 
             supervised_g_losses = []
             self.gen_loader.reset_pointer()
@@ -849,7 +849,7 @@ class ORGANIC(object):
             if self.verbose:
                 print('\nDISCRIMINATOR PRETRAINING')
 
-            for i in tqdm(range(self.PRETRAIN_DIS_EPOCHS)):
+            for i in range(self.PRETRAIN_DIS_EPOCHS):
 
                 negative_samples = self.generate_samples(self.POSITIVE_NUM)
                 dis_x_train, dis_y_train = self.dis_loader.load_train_data(
@@ -914,7 +914,7 @@ class ORGANIC(object):
             print('============================\n')
 
         results_rows = []
-        for nbatch in tqdm(range(self.TOTAL_BATCH)):
+        for nbatch in range(self.TOTAL_BATCH):
 
             results = OrderedDict({'exp_name': self.PREFIX})
 

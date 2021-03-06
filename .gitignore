@@ -104,3 +104,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# experiments
+experiments/pfas
+experiments/test
+
+# data
+data
